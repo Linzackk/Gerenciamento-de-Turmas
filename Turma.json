@@ -1,0 +1,19 @@
+{
+    "Sistema": 0,
+    "Isaac20": {
+        "nome": "Isaac de Medeiros",
+        "idade": 20,
+        "notas": {
+            "bimestre1": 0,
+            "bimestre2": 0
+        }
+    },
+    "Isaac21": {
+        "nome": "Isaac de Medeiros",
+        "idade": 21,
+        "notas": {
+            "bimestre1": 0,
+            "bimestre2": 0
+        }
+    }
+}
