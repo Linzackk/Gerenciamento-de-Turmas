@@ -4,16 +4,18 @@
 # Criar Objeto Turma, possui str Nome, lista de objetos aluno.
 # Metódos da Turma: Adicionar_aluno(aluno), media_turma(), aluno_maior_media()
 import json
+import arquivos as arq
+import verificacao as ver
 
-# Garante que a lista da Turma exista no arquivo JSON
+# Garante que o Arquivo "Alunos" sempre existirá com informação.
 try: 
-    with open("Turma.json", "r") as arquivo:
+    with open(f"Alunos.json", "r") as arquivo:
         teste = json.loads("\n".join(arquivo.readlines()))
 except json.decoder.JSONDecodeError:
-    with open("Turma.json", "w") as arquivo:
+    with open(f"Alunos.json", "w") as arquivo:
         dictVazio = {}
         json.dump(dictVazio, arquivo, indent=4)
-    
+
 class Aluno:
     def __init__ (self, nome, idade, notas = {"bimestre1": 0, "bimestre2": 0}):
         self.nome = nome
@@ -23,45 +25,74 @@ class Aluno:
     def atribuir_nota(self, bimestre, nota):
         self.notas[bimestre] = nota
         
+    def ver_informacoes(self):
+        print(f"Aluno: {self.nome}")
+        print(f"Idade: {self.idade}")
+        print(f"Notas: \nBimestre 1: {self.notas["bimestre1"]}\nBimestre 2: {self.notas["bimestre2"]}")
+        
+    def trocar_nome(self, novoNome):
+        self.nome = novoNome
+    
+    def trocar_idade(self, novaIdade):
+        self.idade = novaIdade
+        
 def aluno_para_dict(aluno):
    return {
             "nome" : aluno.nome,
             "idade": aluno.idade,
             "notas": aluno.notas
         }
-   
+
+# Variavel para habilitar o salvamento no arquivo 
+deveSalvar = False
+
 # Importa a turma salva no arquivo
-with open("Turma.json", "r") as arquivo:
-     turma_salva = json.loads("\n".join(arquivo.readlines()))
-    
+turma_salva = arq.importarArquivo()
+
 print(f"Controle de Turmas")
 
-# Informações Básicas do Aluno
-nome = input("Nome do Aluno: ")
-idade = int(input("Idade do Aluno: "))
-usuario = nome.split()[0] + str(idade)
+# CRUD do aluno
+while True:
+    usuario = input("Insira o Usuario do Aluno: ")
+    if usuario in turma_salva:
+        break
+print("Usuário Existente.")
 
-# Criando aluno
-aluno = Aluno(nome, idade)
-
-# Atribuindo notas do aluno
-atribuicao = input("Deseja atribuir notas para o aluno? [s/n]").lower().strip()
-if atribuicao == "s":
-    print(f"Insira '-1' caso não queira atribuir uma nota.")
-    bim1 = float(input("Nota para o Bimestre 1: "))
-    bim2 = float(input("Nota para o Bimestre 2: "))
+aluno = Aluno(turma_salva[usuario]["nome"], turma_salva[usuario]["idade"], turma_salva[usuario]["notas"])
     
-    # Verifica se a nota é válida (entre 0 e 10) e atribui ao aluno adicionado.
-    if 0 <= bim2 and bim2 <= 10:
-        aluno.atribuir_nota("bimestre1", bim1)
-    if 0 <= bim2 and bim2 <= 10:
-        aluno.atribuir_nota("bimestre2", bim2)
-        
-    print(f"Notas atualizadas com sucesso.")    
+opcoes = ["Adicionar Aluno: ", "Verificar Aluno", "Atualizar Aluno", "Deletar Aluno"]
+escolha = ver.verificacaoEscolha(opcoes)
+# If para cada escolha
+
+# Fazer só possível caso seja Administrador a conta
+if escolha == 0:
+    print("Nenhuma opção foi escolhida.")
+if escolha == 1:
+    print("Adicionar aluno: ") # Place Holder
     
-turma_salva[usuario] = aluno_para_dict(aluno)
+if escolha == 2:
+    aluno.ver_informacoes()
+    
+if escolha == 3:
+    opcoesAlteracao = ["Nome", "Idade"]
+    escolhaAlteracao = ver.verificacaoEscolha(opcoesAlteracao)
+    
+    if escolhaAlteracao == 0:
+        print("Nenhuma opção foi escolhida;")
+    if escolhaAlteracao == 1:
+        # Atualiza o Nome
+        aluno.trocar_nome(input("Insira o novo nome do Aluno: "))
+        deveSalvar = True
+    if escolhaAlteracao == 2:
+        # Atualiza a Idade
+        aluno.trocar_idade(input("Insira a nova idade do Aluno: "))
+        deveSalvar = True
 
-
-# Salvar no Json
-with open('Turma.json',"w") as arquivo:
-    json.dump(turma_salva, arquivo, indent=4)
+# Apenas o Administrador.
+if escolha == 4:
+    print("Deletar aluno: ") # Place Holder
+    
+if deveSalvar:
+    turma_salva[usuario] = aluno_para_dict(aluno)
+    arq.salvarArquivo(turma_salva)
+    
