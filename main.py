@@ -4,8 +4,8 @@
 # Criar Objeto Turma, possui str Nome, lista de objetos aluno.
 # Metódos da Turma: Adicionar_aluno(aluno), media_turma(), aluno_maior_media()
 import json
-import arquivos as arq
-import verificacao as ver
+import funcoes.arquivos as arq
+import funcoes.verificacao as ver
 
 # Garante que o Arquivo "Alunos" sempre existirá com informação.
 try: 
