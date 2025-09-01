@@ -1,4 +1,5 @@
 # Funções para verificação de dados
+import funcoes.arquivos as arq
 
 def verificacaoEscolha(opcoes):
     limite = [0, (len(opcoes) -1)]
@@ -13,9 +14,13 @@ def verificacaoEscolha(opcoes):
         continue
     return escolha
 
-def verificacaoUsuario(usuario, dicionario):
+def verificacaoUsuarioExiste(usuario):
+    
+    dicionario = arq.importarArquivo()
     if usuario not in dicionario:
+        print(f"O USUARIO NAO TA NO DICIONARIO")
         return False
     else:
+        print(f"O USUARIO TA NO DICIONARIO")
         return True
-    
+ 
