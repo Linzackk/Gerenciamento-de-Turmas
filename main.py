@@ -5,13 +5,14 @@
 # Metódos da Turma: Adicionar_aluno(aluno), media_turma(), aluno_maior_media()
 import json
 
-# Garante que a lista da Turma é sempre criada
-try:
-    a = open("Turma.json", "x")
-except FileExistsError:
-    a = open("Turma.json", "r")
-finally:
-    a.close()
+# Garante que a lista da Turma exista no arquivo JSON
+try: 
+    with open("Turma.json", "r") as arquivo:
+        teste = json.loads("\n".join(arquivo.readlines()))
+except json.decoder.JSONDecodeError:
+    with open("Turma.json", "w") as arquivo:
+        dictVazio = {}
+        json.dump(dictVazio, arquivo, indent=4)
     
 class Aluno:
     def __init__ (self, nome, idade, notas = {"bimestre1": 0, "bimestre2": 0}):
