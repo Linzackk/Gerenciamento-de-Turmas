@@ -6,37 +6,16 @@
 import json
 import funcoes.arquivos as arq
 import funcoes.verificacao as ver
+from classes.aluno import Aluno
+from classes.professor import Professor 
+from classes.adm import Adm
 
-# Garante que o Arquivo "Alunos" sempre existirá com informação.
-try: 
-    with open(f"Alunos.json", "r") as arquivo:
-        teste = json.loads("\n".join(arquivo.readlines()))
-except json.decoder.JSONDecodeError:
-    with open(f"Alunos.json", "w") as arquivo:
-        dictVazio = {}
-        json.dump(dictVazio, arquivo, indent=4)
+# Garante que os Arquivos estejam com alguma informação para ser lida
+bancoDados = ["Alunos", "Professores", "Administrativo"]
+for i in bancoDados:
+    arq.garantirExistenciaArquivo(i)
 
-class Aluno:
-    def __init__ (self, usuario, nome, idade, notas = {"bimestre1": 0, "bimestre2": 0}):
-        self.usuario = usuario
-        self.nome = nome
-        self.idade = idade
-        self.notas = notas
-        
-    def atribuir_nota(self, bimestre, nota):
-        self.notas[bimestre] = nota
-        
-    def ver_informacoes(self):
-        print(f"Aluno: {self.nome}")
-        print(f"Idade: {self.idade}")
-        print(f"Notas: \nBimestre 1: {self.notas["bimestre1"]}\nBimestre 2: {self.notas["bimestre2"]}")
-        
-    def trocar_nome(self, novoNome):
-        self.nome = novoNome
-    
-    def trocar_idade(self, novaIdade):
-        self.idade = novaIdade
-        
+# Refatorar para outro arquivo
 def aluno_para_dict(aluno):
    return{
             "nome" : aluno.nome,
@@ -44,19 +23,16 @@ def aluno_para_dict(aluno):
             "notas": aluno.notas
             }
 
-
-# Variavel para habilitar o salvamento no arquivo 
-alteracaoUsuarioExistente = False
-alteracaoNovoUsuario = False
-
+# Apresentação
+# Fazer apresentável
 print(f"Controle de Turmas")
 
-# CRUD do aluno
 while True:
     usuario = input("Insira o Usuario do Aluno: ")
     if ver.verificacaoUsuarioExiste(usuario):
         break
-print("Usuário Existente.")
+print("Logado com Sucesos")
+print("IGNORAR O RESTO A PARTIR DAQUI POIS ESTÁ EM MANUTENÇÃO")
 
 # Importa a turma salva no arquivo
 turma_salva = arq.importarArquivo()
@@ -105,12 +81,4 @@ if escolha == 3:
 # Apenas o Administrador.
 if escolha == 4:
     print("Deletar aluno: ") # Place Holder
-    
-if alteracaoUsuarioExistente:
-    turma_salva[usuario] = aluno_para_dict(aluno)
-    arq.salvarArquivo(turma_salva)
-    
-if alteracaoNovoUsuario:
-    turma_salva[novoUsuario] = aluno_para_dict(novoAluno)
-    arq.salvarArquivo(turma_salva)
     

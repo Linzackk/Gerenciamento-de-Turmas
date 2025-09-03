@@ -1,15 +1,57 @@
 # Funções para Lidar com arquivos no geral
 
 import json
-import funcoes.verificacao as ver
+import os
+from . import verificacao as ver
 
-def importarArquivo():  
-    with open(f"Alunos.json", "r") as arquivo:
-        turma_salva = json.loads("\n".join(arquivo.readlines()))
-    return turma_salva
+def garantirExistenciaArquivo(nomeArquivo):
+    # Redireciona o Caminho para a Pasta "arquivosJson" para ficar organizado
+    caminho_base = os.path.join(os.path.dirname(__file__), "..", "arquivosJson")
+    
+    # Garante que o parametro vai ter um .json ao final
+    if not nomeArquivo.endswith(".json"):
+        nomeArquivo += ".json"
+        
+    # Direciona o caminho
+    caminhoArquivo = os.path.join(caminho_base, nomeArquivo)
+    
+    # Garante que há um texto sempre no arquivo
+    try: 
+        with open(caminhoArquivo, "r") as arquivo:
+            teste = json.loads("\n".join(arquivo.readlines()))
+    except json.decoder.JSONDecodeError:
+        with open(caminhoArquivo, "w") as arquivo:
+            dictVazio = {}
+            json.dump(dictVazio, arquivo, indent=4)
 
-def salvarArquivo(informacao):
-    with open('Alunos.json',"w") as arquivo:
+
+def importarArquivo(nomeArquivo):
+    # Redireciona o Caminho para a Pasta "arquivosJson" para ficar organizado
+    caminho_base = os.path.join(os.path.dirname(__file__), "..", "arquivosJson")
+    
+    # Garante que o parametro vai ter um .json ao final
+    if not nomeArquivo.endswith(".json"):
+        nomeArquivo += ".json"
+        
+    # Direciona o caminho
+    caminhoArquivo = os.path.join(caminho_base, nomeArquivo)
+    
+    with open(caminhoArquivo, "r") as arquivo:
+        dicionarioBanco = json.loads("\n".join(arquivo.readlines()))
+    return dicionarioBanco
+
+def salvarArquivo(informacao, nomeArquivo):
+    # Redireciona o Caminho para a Pasta "arquivosJson" para ficar organizado
+    caminho_base = os.path.join(os.path.dirname(__file__), "..", "arquivosJson")
+    
+    # Garante que o parametro vai ter um .json ao final
+    if not nomeArquivo.endswith(".json"):
+        nomeArquivo += ".json"
+        
+    # Direciona o caminho
+    caminhoArquivo = os.path.join(caminho_base, nomeArquivo)
+    
+    with open(caminhoArquivo,"w") as arquivo:
         json.dump(informacao, arquivo, indent=4)
         
 def adicionarAluno(nomeCompleto="", idade=0, cargo=""):
