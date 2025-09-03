@@ -20,11 +20,14 @@ def verificacaoUsuarioExiste(usuario):
         "pr": "Professores",
         "ad": "Administrativo"
     }
-    sigla = nomeArquivo[usuario[-2:]]
-    print(f"Acessando o arquivo: {sigla}.json")
-    dicionario = arq.importarArquivo(sigla)
-    if usuario not in dicionario:
+    try:
+        sigla = nomeArquivo[usuario[-2:]]
+    except KeyError:
         return False
     else:
-        return True
+        dicionario = arq.importarArquivo(sigla)
+        if usuario not in dicionario:
+            return False
+        else:
+            return True
  
