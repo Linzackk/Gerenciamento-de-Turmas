@@ -18,32 +18,40 @@ bancoDados = ["Alunos", "Professores", "Administrativo"]
 for i in bancoDados:
     arq.garantirExistenciaArquivo(i)
 
-# Refatorar para outro arquivo
-def aluno_para_dict(aluno):
-   return{
-            "nome" : aluno.nome,
-            "idade": aluno.idade,
-            "notas": aluno.notas
-            }
-
 # Apresentação
-
 est.titulo("Controle de Turmas")
 
 while True:
-    usuario = est.respostas("Insira o Usuário para Login").lower()
-    if ver.verificacaoUsuarioExiste(usuario):
+    user = est.respostas("Insira o Usuário para Login").lower()
+    if ver.verificacaoUsuarioExiste(user):
         break
 print("Logado com Sucesso")
-print("IGNORAR O RESTO A PARTIR DAQUI POIS ESTÁ EM MANUTENÇÃO")
 
-# Importa a turma salva no arquivo
-turma_salva = arq.importarArquivo()
-
-# Carrega aluno logado
-#aluno = Aluno(usuario, turma_salva[usuario]["nome"], turma_salva[usuario]["idade"], turma_salva[usuario]["notas"])
+sigla = user[-2:]
+if sigla == "al":
+    # Menu do Aluno
+    alunos = arq.importarArquivo("Alunos")
+    aluno = Aluno(user, alunos[user]["nome"], alunos[user]["idade"], alunos[user]["notas"])
+    escolha = -1
     
-opcoes = ["Adicionar Aluno: ", "Verificar Aluno", "Atualizar Aluno", "Deletar Aluno"]
-escolha = ver.verificacaoEscolha(opcoes)
-
+    # Loop para Manter no Menu
+    while escolha != 0:
+        escolha = aluno.mostrarMenu()
+        if escolha == 1:
+            aluno.verNotas()
+        elif escolha == 2:
+            aluno.atualizarInformacoes()
+            arq.salvarArquivo(arq.salvarAluno(aluno, alunos), "Alunos")
+        elif escolha == 3:
+            aluno.ver_informacoes()
+            
+elif sigla == "pr":
+    professores = arq.importarArquivo("Professores")
+    professor = Professor(user, professores[user]["nome"], professores[user]["idade"], professores[user]["materia"])
     
+elif sigla == "ad":
+    # Menu do Administrativo
+    adms = arq.importarArquivo("Administrativo")
+    adm = Adm(user, adms[user]["nome"], adms[user]["idade"])
+    
+print("Saindo")

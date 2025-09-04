@@ -54,6 +54,28 @@ def salvarArquivo(informacao, nomeArquivo):
     with open(caminhoArquivo,"w") as arquivo:
         json.dump(informacao, arquivo, indent=4)
         
+def salvarAluno(aluno, arquivo):
+    def aluno_para_dict(aluno):
+        return{
+            "nome" : aluno.nome,
+            "idade": aluno.idade,
+            "notas": aluno.notas
+            }
+    
+    arquivo[aluno.usuario] = aluno_para_dict(aluno)
+    return arquivo
+
+def salvarProfessor(prof, arquivo):
+    def prof_para_dict(prof):
+        return {
+            "nome" : prof.nome,
+            "idade": prof.idade,
+            "materia": prof.materia
+        }
+        
+    arquivo[prof.usuario] = prof_para_dict(prof)
+    return arquivo
+        
 def adicionarAluno(nomeCompleto="", idade=0, cargo=""):
     def criacaoUsuario(nomeCompleto, cargo):
         user = f"{nomeCompleto.split()[0]}{nomeCompleto.split()[-1]}{cargo[:2]}".lower()
