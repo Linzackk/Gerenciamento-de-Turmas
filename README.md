@@ -52,7 +52,8 @@ Para facilitar os testes do programa, seguem três contas já cadastradas:
 **Nome:** Exemplo Aluno  
 **Idade:** 18  
 **Notas:**  
-```json
+```
+json
 {
   "semestre1": 7.5,
   "semestre2": 8.0
@@ -78,6 +79,7 @@ Idade: 40
 
 ---
 
+```
 manipulacaoTurmas/
 ├── main.py # Arquivo principal para rodar o programa
 ├── classes/ # Contém as classes do projeto
@@ -91,6 +93,7 @@ manipulacaoTurmas/
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
 ```
+
 
 
 
