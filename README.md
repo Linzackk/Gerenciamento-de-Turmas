@@ -24,6 +24,21 @@ O objetivo é fornecer uma ferramenta prática e organizada para cadastrar, atua
 
 ---
 
+## Exemplos Visuais do Programa
+
+Para facilitar a compreensão, seguem alguns prints do sistema em execução:
+
+### Tela de Login
+Mostrando a interface inicial e como o usuário faz login.
+![Tela de Login](imagens/telaLogin.png)
+
+### Menu do Professor
+Exemplo de como o professor acessa suas funções dentro do sistema.
+![Menu do Professor](imagens/menuProfessor.png)
+
+### Criação de Professor
+Mostrando a criação de um novo professor com cadastro automático de usuário.
+![Criação de Professor](imagens/criacaoProfessor.png)
 
 
 ---
@@ -44,5 +59,6 @@ manipulacaoTurmas/
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
 ```
+
 
 
