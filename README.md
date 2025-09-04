@@ -43,9 +43,41 @@ Mostrando a criação de um novo professor com cadastro automático de usuário.
 
 ---
 
+## Contas de Exemplo
+
+Para facilitar os testes do programa, seguem três contas já cadastradas:
+
+### Aluno
+**Usuário:** `exemploalunoal`  
+**Nome:** Exemplo Aluno  
+**Idade:** 18  
+**Notas:**  
+```json
+{
+  "semestre1": 7.5,
+  "semestre2": 8.0
+}
+
+
 ## Estrutura do Projeto
 
 ```
+
+Professor
+
+Usuário: exemploprofpr
+Nome: Exemplo Professor
+Idade: 35
+Matéria: Matemática
+
+Administrador
+
+Usuário: exemploadmad
+Nome: Exemplo Admin
+Idade: 40
+
+---
+
 manipulacaoTurmas/
 ├── main.py # Arquivo principal para rodar o programa
 ├── classes/ # Contém as classes do projeto
@@ -59,6 +91,7 @@ manipulacaoTurmas/
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
 ```
+
 
 
 
