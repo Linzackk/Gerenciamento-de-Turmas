@@ -47,4 +47,4 @@ class Aluno:
         est.mostrarMenu(notas, "NOTAS DISPONÍVEIS")
         escolha = ver.verificacaoEscolha(notas)
         if escolha != 0:
-            print(f"Nota do {escolha}° Semestre: {self.notas[f"Semestre{escolha}"]}")
+            print(f"Nota do {escolha}° Semestre: {self.notas[f"semestre{escolha}"]}")

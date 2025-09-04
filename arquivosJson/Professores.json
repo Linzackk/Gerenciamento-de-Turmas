@@ -7,22 +7,22 @@
     "sofiacardosopr": {
         "nome": "Sofia Ferreira Cardoso",
         "idade": 38,
-        "materia": "Química"
+        "materia": "Qu\u00c3\u00admica"
     },
     "felipesilvapr": {
         "nome": "Felipe Teles Silva",
         "idade": 49,
-        "materia": "Português"
+        "materia": "Portugu\u00c3\u00aas"
     },
     "anasilvapr": {
         "nome": "Ana Almeida Silva",
         "idade": 30,
-        "materia": "Inglês"
+        "materia": "Ingl\u00c3\u00aas"
     },
     "julianacostapr": {
         "nome": "Juliana Gomes Costa",
         "idade": 32,
-        "materia": "Português"
+        "materia": "Portugu\u00c3\u00aas"
     },
     "felipemoraespr": {
         "nome": "Felipe Gomes Moraes",
@@ -42,12 +42,12 @@
     "anabezerrapr": {
         "nome": "Ana Ferreira Bezerra",
         "idade": 56,
-        "materia": "Inglês"
+        "materia": "Ingl\u00c3\u00aas"
     },
     "pedropereirapr": {
         "nome": "Pedro Medeiros Pereira",
         "idade": 28,
-        "materia": "Física"
+        "materia": "F\u00c3\u00adsica"
     },
     "sofiasouzapr": {
         "nome": "Sofia Ferreira Souza",
@@ -57,7 +57,7 @@
     "mariacostapr": {
         "nome": "Maria Medeiros Costa",
         "idade": 41,
-        "materia": "Física"
+        "materia": "F\u00c3\u00adsica"
     },
     "gabrieloliveirapr": {
         "nome": "Gabriel Costa Oliveira",
@@ -67,41 +67,46 @@
     "felipeoliveirapr": {
         "nome": "Felipe Moraes Oliveira",
         "idade": 47,
-        "materia": "Inglês"
+        "materia": "Ingl\u00c3\u00aas"
     },
     "feliperamospr": {
         "nome": "Felipe Cardoso Ramos",
         "idade": 51,
-        "materia": "Física"
+        "materia": "F\u00c3\u00adsica"
     },
     "gabrielalmeidapr": {
         "nome": "Gabriel Silva Almeida",
         "idade": 25,
         "materia": "Artes"
     },
-    "joãosilvapr": {
-        "nome": "João Medeiros Silva",
+    "jo\u00c3\u00a3osilvapr": {
+        "nome": "Jo\u00c3\u00a3o Medeiros Silva",
         "idade": 44,
         "materia": "Artes"
     },
     "larissabezerrapr": {
         "nome": "Larissa Gomes Bezerra",
         "idade": 57,
-        "materia": "Educação Física"
+        "materia": "Educa\u00c3\u00a7\u00c3\u00a3o F\u00c3\u00adsica"
     },
     "sofiacardoso01pr": {
         "nome": "Sofia Barbosa Cardoso",
         "idade": 52,
         "materia": "Biologia"
     },
-    "joãosouzapr": {
-        "nome": "João Almeida Souza",
+    "jo\u00c3\u00a3osouzapr": {
+        "nome": "Jo\u00c3\u00a3o Almeida Souza",
         "idade": 29,
         "materia": "Biologia"
     },
     "pedromoraespr": {
         "nome": "Pedro Barbosa Moraes",
         "idade": 40,
-        "materia": "História"
+        "materia": "Hist\u00c3\u00b3ria"
+    },
+    "isaactelespr": {
+        "nome": "Isaac De Medeiros Teles",
+        "idade": 20,
+        "materia": "Matematica"
     }
 }
