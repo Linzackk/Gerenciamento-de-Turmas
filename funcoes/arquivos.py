@@ -26,7 +26,7 @@ def garantirExistenciaArquivo(nomeArquivo):
 
 
 def importarArquivo(nomeArquivo):
-    # Redireciona o Caminho para a Pasta "arquivosJson" para ficar organizado
+    # Redireciona o Caminho para a Pasta "arquivosJson"
     caminho_base = os.path.join(os.path.dirname(__file__), "..", "arquivosJson")
     
     # Garante que o parametro vai ter um .json ao final
@@ -41,7 +41,7 @@ def importarArquivo(nomeArquivo):
     return dicionarioBanco
 
 def salvarArquivo(informacao, nomeArquivo):
-    # Redireciona o Caminho para a Pasta "arquivosJson" para ficar organizado
+    # Redireciona o Caminho para a Pasta "arquivosJson"
     caminho_base = os.path.join(os.path.dirname(__file__), "..", "arquivosJson")
     
     # Garante que o parametro vai ter um .json ao final

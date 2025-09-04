@@ -1,8 +1,6 @@
 # Controle de Turmas
 
-# Criar Objeto Aluno, possui str Nome, int Idade, lista de float Notas.
-# Criar Objeto Turma, possui str Nome, lista de objetos aluno.
-# Metódos da Turma: Adicionar_aluno(aluno), media_turma(), aluno_maior_media()
+# TODO: Metódos da Turma: Adicionar_aluno(aluno), media_turma(), aluno_maior_media()
 import json
 
 import funcoes.arquivos as arq
@@ -29,12 +27,12 @@ print("Logado com Sucesso")
 
 sigla = user[-2:]
 if sigla == "al":
-    # Menu do Aluno
     alunos = arq.importarArquivo("Alunos")
     aluno = Aluno(user, alunos[user]["nome"], alunos[user]["idade"], alunos[user]["notas"])
-    escolha = -1
     
+    # Menu do Aluno
     # Loop para Manter no Menu
+    escolha = -1
     while escolha != 0:
         escolha = aluno.mostrarMenu()
         if escolha == 1:
@@ -49,6 +47,18 @@ elif sigla == "pr":
     professores = arq.importarArquivo("Professores")
     professor = Professor(user, professores[user]["nome"], professores[user]["idade"], professores[user]["materia"])
     
+    # Menu do Professor
+    escolha = -1
+    while escolha != 0:
+        escolha = professor.mostrarMenu()
+        if escolha == 1:
+            professor.atribuirNotas()
+        elif escolha == 2:
+            professor.atualizarInformacoes()
+            arq.salvarArquivo(arq.salvarProfessor(professor, professores), "Professores")
+        elif escolha == 3:
+            professor.verInformacoes()
+        
 elif sigla == "ad":
     # Menu do Administrativo
     adms = arq.importarArquivo("Administrativo")

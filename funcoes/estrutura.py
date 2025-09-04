@@ -11,8 +11,8 @@ def separacao(func):
 
 def semiSeparacao(func):
     def wrapper(*args, **kwargs):
-        resultado = func(*args, **kwargs)
         print("-" * 50)
+        resultado = func(*args, **kwargs)
         return resultado
     return wrapper
     

@@ -9,7 +9,7 @@ class Aluno:
         self.idade = idade
         self.notas = notas
     
-    @est.separacao   
+    @est.semiSeparacao  
     def ver_informacoes(self):
         print(f"Aluno: {self.nome}")
         print(f"Idade: {self.idade}")
@@ -41,7 +41,7 @@ class Aluno:
         escolha = ver.verificacaoEscolha(opcoes)
         return escolha
     
-    @est.separacao      
+    @est.semiSeparacao       
     def verNotas(self):
         notas = ["Bimestre 1", "Bimestre 2"]
         est.mostrarMenu(notas, "NOTAS DISPONÍVEIS")
