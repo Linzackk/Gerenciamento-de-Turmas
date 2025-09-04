@@ -59,6 +59,3 @@ manipulacaoTurmas/
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
 ```
-
-
-

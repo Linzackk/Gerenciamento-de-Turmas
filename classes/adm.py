@@ -12,6 +12,7 @@ class Adm:
         
     @est.separacao
     def mostrarMenu(self):
+        # Mostra o Menu Principal do Administrativo
         opcoes = ["Adicionar Aluno", "Deletar Aluno", "Adicionar Professor", "Deletar Professor"]
         est.mostrarMenu(opcoes, "MENU DO PROFESSOR")
         escolha = ver.verificacaoEscolha(opcoes)
@@ -19,33 +20,41 @@ class Adm:
     
     @est.semiSeparacao
     def addAluno(self):
+        # Adiciona um Aluno ao Sistema
+        
         @est.semiSeparacao
         def confirmacao():
+            # Confirmação dos Dados
             certeza = input("[S/N]\n").upper()
             return certeza
         
         correto = ""
         while correto != "S":
+            # Coleta dos Dados
             nome = input("Nome completo: ").lower().title()
             idade = int(input("Idade: "))
             print('-' * 50)
             print(f"Informações inseridas: \nNome: {nome}\nIdade: {idade}")
             correto = confirmacao()
         
+        # Atualização no Arquivo e Salvamento no JSON
         alunos = arq.importarArquivo("Alunos")
         usuario = arq.adicionarUsuario(nome, "Aluno")
         aluno = Aluno(usuario, nome, idade)
         arq.salvarArquivo(arq.salvarAluno(aluno, alunos), "Alunos") 
         
     @est.semiSeparacao   
-    def addProf(self):  
+    def addProf(self):
+        # Adiciona um Professor ao Sistema  
         @est.semiSeparacao
         def confirmacao():
+            # Confirmação dos Dados
             certeza = input("[S/N]\n").upper()
             return certeza
                   
         correto = ""
         while correto != "S":
+            # Coleta dos Dados
             nome = input("Nome completo: ").lower().title()
             idade = int(input("Idade: "))
             materia = input("Materia de Ensino: ")
@@ -53,6 +62,7 @@ class Adm:
             print(f"Informações inseridas: \nNome: {nome}\nIdade: {idade}\nMatéria: {materia}")
             correto = confirmacao()
         
+        # Atualização no Arquivo e Salvamento no JSON
         profs = arq.importarArquivo("Professores")
         usuario = arq.adicionarUsuario(nome, "Professor") 
         professor = Professor(usuario, nome, idade, materia)
@@ -60,16 +70,22 @@ class Adm:
     
     @est.semiSeparacao
     def deletarAluno(self):
+        # Deleta um Aluno do Arquivo
         @est.semiSeparacao
         def confirmacao():
+            # Confirma a Deletagem
             certeza = input("Confirme o pedido de Remoção do Aluno [S/N]\n").upper()
             return certeza
+        
+        # verifica a existência do usuário
         usuario = ''
         while not ver.verificacaoUsuarioExiste(usuario):
             usuario = input("Insira o Usuário do Aluno: ")
         alunos = arq.importarArquivo("Alunos")
         
         certeza = confirmacao()
+        
+        # Deleta e salva no arquivo a alteração
         if certeza == "S":
             alunos.pop(usuario)
             print(f"Aluno deletado com sucesso.")
@@ -80,18 +96,22 @@ class Adm:
     
     @est.semiSeparacao    
     def deletarProf(self):
+        # Deleta um Professor do Arquivo
         @est.semiSeparacao
         def confirmacao():
+            # Confirma a Deletagem
             certeza = input("Confirme o pedido de Remoção do Professor [S/N]\n").upper()
             return certeza
         
-        
+        # verifica a existência do usuário
         usuario = ''
         while not ver.verificacaoUsuarioExiste(usuario):
             usuario = input("Insira o Usuário do Professor: ")
         professores = arq.importarArquivo("Professores")
         
         certeza = confirmacao()
+        
+        # Deleta e salva no arquivo a alteração
         if certeza == "S":
             professores.pop(usuario)
             print(f"Professor deletado com sucesso.")
