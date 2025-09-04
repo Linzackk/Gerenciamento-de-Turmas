@@ -49,20 +49,15 @@ class Professor:
             usuario = input("Insira o Usuário do Aluno: ")
         alunos = arq.importarArquivo("Alunos")
         
-        opcoes = ["Bimestre 1", "Bimestre 2"]
+        opcoes = ["Semestre 1", "Semestre 2"]
         est.mostrarMenu(opcoes, "NOTAS ALTERÁVEIS")
         escolha = ver.verificacaoEscolha(opcoes)
-        
-        if escolha == 1:
-            bimestre = "bimestre1"
-        elif escolha == 2:
-            bimestre = "bimestre2"
-            
+          
         if escolha != 0:    
             nota = -1
             while nota < 0 or nota > 10:
                 nota = float(input("Insira a Nota: "))
-            alunos[usuario]["notas"][bimestre] = nota
+            alunos[usuario]["notas"][f"semestre{escolha}"] = nota
             arq.salvarArquivo(alunos, "Alunos")
         
         

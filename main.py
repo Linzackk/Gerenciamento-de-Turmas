@@ -64,4 +64,16 @@ elif sigla == "ad":
     adms = arq.importarArquivo("Administrativo")
     adm = Adm(user, adms[user]["nome"], adms[user]["idade"])
     
+    escolha = -1
+    while escolha != 0:
+        escolha = adm.mostrarMenu()
+        if escolha == 1:
+            adm.addAluno()
+        elif escolha == 2:
+            adm.deletarAluno()
+        elif escolha == 3:
+            adm.addProf()
+        elif escolha == 4:
+            adm.deletarProf()
+    
 print("Saindo")

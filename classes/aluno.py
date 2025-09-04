@@ -3,7 +3,7 @@ from funcoes import verificacao as ver
 from funcoes import estrutura as est
 
 class Aluno:
-    def __init__ (self, usuario, nome, idade, notas = {"bimestre1": 0, "bimestre2": 0}):
+    def __init__ (self, usuario, nome, idade, notas = {"semestre1": 0, "semestre2": 0}):
         self.usuario = usuario
         self.nome = nome
         self.idade = idade
@@ -43,8 +43,8 @@ class Aluno:
     
     @est.semiSeparacao       
     def verNotas(self):
-        notas = ["Bimestre 1", "Bimestre 2"]
+        notas = ["Semestre 1", "Semestre 2"]
         est.mostrarMenu(notas, "NOTAS DISPONÍVEIS")
         escolha = ver.verificacaoEscolha(notas)
         if escolha != 0:
-            print(f"Nota do {escolha}° Bimestre: {self.notas[f"bimestre{escolha}"]}")
+            print(f"Nota do {escolha}° Semestre: {self.notas[f"Semestre{escolha}"]}")

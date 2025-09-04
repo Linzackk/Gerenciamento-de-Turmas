@@ -3,8 +3,8 @@
         "nome": "Zaquinho do Vrau",
         "idade": "20",
         "notas": {
-            "bimestre1": 8,
-            "bimestre2": 0
+            "semestre1": 8,
+            "semestre2": 0
         }
     },
     "josesilvaal": {
@@ -21,6 +21,30 @@
         "notas": {
             "bimestre1": 0,
             "bimestre2": 0
+        }
+    },
+    "isaactelesal": {
+        "nome": "Isaac medeiros teles",
+        "idade": 20,
+        "notas": {
+            "semestre1": 0,
+            "semestre2": 0
+        }
+    },
+    "isaacteles01al": {
+        "nome": "Isaac de medeiros teles",
+        "idade": 20,
+        "notas": {
+            "semestre1": 0,
+            "semestre2": 0
+        }
+    },
+    "isaacmedeiros02al": {
+        "nome": "Isaac De Medeiros",
+        "idade": 20,
+        "notas": {
+            "semestre1": 0,
+            "semestre2": 0
         }
     }
 }

@@ -1,7 +1,12 @@
 {
     "isaacmedeirospr": {
-        "nome": "Isaac de Medeiros Teles",
-        "idade": "20",
-        "materia": "Programacao Orientada a Objeto em C#"
+        "nome": "Isaac De Medeiros",
+        "idade": 20,
+        "materia": "Matematica"
+    },
+    "joaosilvapr": {
+        "nome": "Joao Carlos Bezerro Da Silva",
+        "idade": 29,
+        "materia": "Historia"
     }
 }

@@ -76,7 +76,7 @@ def salvarProfessor(prof, arquivo):
     arquivo[prof.usuario] = prof_para_dict(prof)
     return arquivo
         
-def adicionarAluno(nomeCompleto="", idade=0, cargo=""):
+def adicionarUsuario(nomeCompleto="", cargo=""):
     def criacaoUsuario(nomeCompleto, cargo):
         user = f"{nomeCompleto.split()[0]}{nomeCompleto.split()[-1]}{cargo[:2]}".lower()
         cont = 0
@@ -86,6 +86,5 @@ def adicionarAluno(nomeCompleto="", idade=0, cargo=""):
             user = user = f"{nomeCompleto.split()[0]}{nomeCompleto.split()[-1]}{cont:02}{cargo[:2]}".lower()
             userExist = ver.verificacaoUsuarioExiste(user)
         return user.lower()
-    nomeCompleto.capitalize()
     user = criacaoUsuario(nomeCompleto, cargo)
-    return user, nomeCompleto, idade
+    return user
