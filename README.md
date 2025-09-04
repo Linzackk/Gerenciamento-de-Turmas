@@ -24,6 +24,10 @@ O objetivo é fornecer uma ferramenta prática e organizada para cadastrar, atua
 
 ---
 
+
+
+---
+
 ## Estrutura do Projeto
 
 ```
@@ -40,4 +44,5 @@ manipulacaoTurmas/
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
 ```
+
 
