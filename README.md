@@ -26,6 +26,7 @@ O objetivo é fornecer uma ferramenta prática e organizada para cadastrar, atua
 
 ## Estrutura do Projeto
 
+```
 manipulacaoTurmas/
 ├── main.py # Arquivo principal para rodar o programa
 ├── classes/ # Contém as classes do projeto
@@ -38,3 +39,5 @@ manipulacaoTurmas/
 │ └── estrutura.py
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
+```
+
