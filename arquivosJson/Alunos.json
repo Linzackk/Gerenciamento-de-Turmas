@@ -1,50 +1,410 @@
 {
-    "isaacmedeirosal": {
-        "nome": "Zaquinho do Vrau",
-        "idade": "20",
-        "notas": {
-            "semestre1": 8,
-            "semestre2": 0
-        }
-    },
-    "josesilvaal": {
-        "nome": "Jose Bezerro da Silva",
-        "idade": "20",
-        "notas": {
-            "bimestre1": 0,
-            "bimestre2": 0
-        }
-    },
-    "isaacmedeiros01al": {
-        "nome": "Isaac de Medeiros",
-        "idade": "20",
-        "notas": {
-            "bimestre1": 0,
-            "bimestre2": 0
-        }
-    },
-    "isaactelesal": {
-        "nome": "Isaac medeiros teles",
-        "idade": 20,
+    "exemploalunoal": {
+        "nome": "Exemplo de uma Conta de Aluno",
+        "idade": 0,
         "notas": {
             "semestre1": 0,
             "semestre2": 0
         }
     },
-    "isaacteles01al": {
-        "nome": "Isaac de medeiros teles",
-        "idade": 20,
+    "pedrosouzaal": {
+        "nome": "Pedro Almeida Souza",
+        "idade": 19,
         "notas": {
-            "semestre1": 0,
-            "semestre2": 0
+            "semestre1": 4.28,
+            "semestre2": 6.35
         }
     },
-    "isaacmedeiros02al": {
-        "nome": "Isaac De Medeiros",
-        "idade": 20,
+    "marianasouzaal": {
+        "nome": "Mariana Almeida Souza",
+        "idade": 16,
         "notas": {
-            "semestre1": 0,
-            "semestre2": 0
+            "semestre1": 6.2,
+            "semestre2": 7.85
+        }
+    },
+    "joãoramosal": {
+        "nome": "João Costa Ramos",
+        "idade": 16,
+        "notas": {
+            "semestre1": 9.38,
+            "semestre2": 3.27
+        }
+    },
+    "gabrielalmeidaal": {
+        "nome": "Gabriel Bezerra Almeida",
+        "idade": 16,
+        "notas": {
+            "semestre1": 1.21,
+            "semestre2": 5.61
+        }
+    },
+    "sofiaalmeidaal": {
+        "nome": "Sofia Souza Almeida",
+        "idade": 18,
+        "notas": {
+            "semestre1": 5.79,
+            "semestre2": 2.01
+        }
+    },
+    "felipegomesal": {
+        "nome": "Felipe Souza Gomes",
+        "idade": 17,
+        "notas": {
+            "semestre1": 7.19,
+            "semestre2": 5.39
+        }
+    },
+    "larissacardosoal": {
+        "nome": "Larissa Gomes Cardoso",
+        "idade": 15,
+        "notas": {
+            "semestre1": 9.55,
+            "semestre2": 3.78
+        }
+    },
+    "mariaferreiraal": {
+        "nome": "Maria Barbosa Ferreira",
+        "idade": 19,
+        "notas": {
+            "semestre1": 9.66,
+            "semestre2": 8.84
+        }
+    },
+    "pedropereiraal": {
+        "nome": "Pedro Oliveira Pereira",
+        "idade": 19,
+        "notas": {
+            "semestre1": 9.69,
+            "semestre2": 2.98
+        }
+    },
+    "camilaramosal": {
+        "nome": "Camila Ferreira Ramos",
+        "idade": 15,
+        "notas": {
+            "semestre1": 7.82,
+            "semestre2": 9.24
+        }
+    },
+    "felipecardosoal": {
+        "nome": "Felipe Cardoso Cardoso",
+        "idade": 17,
+        "notas": {
+            "semestre1": 6.46,
+            "semestre2": 8.26
+        }
+    },
+    "mariabezerraal": {
+        "nome": "Maria Almeida Bezerra",
+        "idade": 15,
+        "notas": {
+            "semestre1": 5.67,
+            "semestre2": 0.99
+        }
+    },
+    "carloscardosoal": {
+        "nome": "Carlos Moraes Cardoso",
+        "idade": 16,
+        "notas": {
+            "semestre1": 7.6,
+            "semestre2": 4.62
+        }
+    },
+    "gabrielbezerraal": {
+        "nome": "Gabriel Barbosa Bezerra",
+        "idade": 16,
+        "notas": {
+            "semestre1": 5.73,
+            "semestre2": 8.69
+        }
+    },
+    "mariasilvaal": {
+        "nome": "Maria Bezerra Silva",
+        "idade": 17,
+        "notas": {
+            "semestre1": 5.79,
+            "semestre2": 9.17
+        }
+    },
+    "camilasouzaal": {
+        "nome": "Camila Cardoso Souza",
+        "idade": 19,
+        "notas": {
+            "semestre1": 3.67,
+            "semestre2": 1.81
+        }
+    },
+    "sofiamedeirosal": {
+        "nome": "Sofia Ferreira Medeiros",
+        "idade": 17,
+        "notas": {
+            "semestre1": 5.03,
+            "semestre2": 1.14
+        }
+    },
+    "camilapereiraal": {
+        "nome": "Camila Silva Pereira",
+        "idade": 18,
+        "notas": {
+            "semestre1": 5.98,
+            "semestre2": 7.81
+        }
+    },
+    "carlosbezerraal": {
+        "nome": "Carlos Souza Bezerra",
+        "idade": 16,
+        "notas": {
+            "semestre1": 3.74,
+            "semestre2": 5.05
+        }
+    },
+    "rafaelpereiraal": {
+        "nome": "Rafael Ferreira Pereira",
+        "idade": 15,
+        "notas": {
+            "semestre1": 1.7,
+            "semestre2": 9.65
+        }
+    },
+    "gabrielmedeirosal": {
+        "nome": "Gabriel Gomes Medeiros",
+        "idade": 18,
+        "notas": {
+            "semestre1": 9.66,
+            "semestre2": 0.72
+        }
+    },
+    "joãoramos01al": {
+        "nome": "João Medeiros Ramos",
+        "idade": 15,
+        "notas": {
+            "semestre1": 9.04,
+            "semestre2": 2.16
+        }
+    },
+    "carlossilvaal": {
+        "nome": "Carlos Almeida Silva",
+        "idade": 16,
+        "notas": {
+            "semestre1": 7.3,
+            "semestre2": 0.95
+        }
+    },
+    "carloscardoso01al": {
+        "nome": "Carlos Costa Cardoso",
+        "idade": 15,
+        "notas": {
+            "semestre1": 3.25,
+            "semestre2": 5.85
+        }
+    },
+    "anaalmeidaal": {
+        "nome": "Ana Ramos Almeida",
+        "idade": 16,
+        "notas": {
+            "semestre1": 6.56,
+            "semestre2": 1.61
+        }
+    },
+    "rafaelbezerraal": {
+        "nome": "Rafael Oliveira Bezerra",
+        "idade": 15,
+        "notas": {
+            "semestre1": 1.2,
+            "semestre2": 0.87
+        }
+    },
+    "gabrielpereiraal": {
+        "nome": "Gabriel Silva Pereira",
+        "idade": 18,
+        "notas": {
+            "semestre1": 9.67,
+            "semestre2": 8.66
+        }
+    },
+    "marianaferreiraal": {
+        "nome": "Mariana Gomes Ferreira",
+        "idade": 15,
+        "notas": {
+            "semestre1": 2.94,
+            "semestre2": 4.55
+        }
+    },
+    "pedrotelesal": {
+        "nome": "Pedro Ramos Teles",
+        "idade": 19,
+        "notas": {
+            "semestre1": 2.66,
+            "semestre2": 8.58
+        }
+    },
+    "mariasouzaal": {
+        "nome": "Maria Pereira Souza",
+        "idade": 16,
+        "notas": {
+            "semestre1": 7.93,
+            "semestre2": 2.86
+        }
+    },
+    "mariabarbosaal": {
+        "nome": "Maria Silva Barbosa",
+        "idade": 19,
+        "notas": {
+            "semestre1": 0.19,
+            "semestre2": 4.57
+        }
+    },
+    "gabrielcostaal": {
+        "nome": "Gabriel Ramos Costa",
+        "idade": 16,
+        "notas": {
+            "semestre1": 3.19,
+            "semestre2": 8.12
+        }
+    },
+    "isaacgomesal": {
+        "nome": "Isaac Barbosa Gomes",
+        "idade": 17,
+        "notas": {
+            "semestre1": 8.15,
+            "semestre2": 7.33
+        }
+    },
+    "mariatelesal": {
+        "nome": "Maria Souza Teles",
+        "idade": 15,
+        "notas": {
+            "semestre1": 1.69,
+            "semestre2": 3.71
+        }
+    },
+    "isaacgomes01al": {
+        "nome": "Isaac Almeida Gomes",
+        "idade": 16,
+        "notas": {
+            "semestre1": 7.17,
+            "semestre2": 0.51
+        }
+    },
+    "gabrielalmeida01al": {
+        "nome": "Gabriel Silva Almeida",
+        "idade": 15,
+        "notas": {
+            "semestre1": 5.11,
+            "semestre2": 1.33
+        }
+    },
+    "isaacsilvaal": {
+        "nome": "Isaac Ferreira Silva",
+        "idade": 19,
+        "notas": {
+            "semestre1": 4.82,
+            "semestre2": 3.42
+        }
+    },
+    "beatrizsilvaal": {
+        "nome": "Beatriz Pereira Silva",
+        "idade": 16,
+        "notas": {
+            "semestre1": 7.28,
+            "semestre2": 8.36
+        }
+    },
+    "larissasilvaal": {
+        "nome": "Larissa Oliveira Silva",
+        "idade": 19,
+        "notas": {
+            "semestre1": 8.19,
+            "semestre2": 5.22
+        }
+    },
+    "rafaelbarbosaal": {
+        "nome": "Rafael Oliveira Barbosa",
+        "idade": 19,
+        "notas": {
+            "semestre1": 3.53,
+            "semestre2": 2.75
+        }
+    },
+    "lucasramosal": {
+        "nome": "Lucas Cardoso Ramos",
+        "idade": 15,
+        "notas": {
+            "semestre1": 3.03,
+            "semestre2": 2.99
+        }
+    },
+    "gabrieloliveiraal": {
+        "nome": "Gabriel Ferreira Oliveira",
+        "idade": 18,
+        "notas": {
+            "semestre1": 2.86,
+            "semestre2": 2.48
+        }
+    },
+    "sofiaferreiraal": {
+        "nome": "Sofia Souza Ferreira",
+        "idade": 18,
+        "notas": {
+            "semestre1": 9.98,
+            "semestre2": 3.04
+        }
+    },
+    "lucassouzaal": {
+        "nome": "Lucas Cardoso Souza",
+        "idade": 16,
+        "notas": {
+            "semestre1": 3.08,
+            "semestre2": 8.14
+        }
+    },
+    "isaacbezerraal": {
+        "nome": "Isaac Barbosa Bezerra",
+        "idade": 16,
+        "notas": {
+            "semestre1": 9.25,
+            "semestre2": 2.43
+        }
+    },
+    "carlosgomesal": {
+        "nome": "Carlos Bezerra Gomes",
+        "idade": 17,
+        "notas": {
+            "semestre1": 6.47,
+            "semestre2": 7.77
+        }
+    },
+    "isaacgomes02al": {
+        "nome": "Isaac Souza Gomes",
+        "idade": 18,
+        "notas": {
+            "semestre1": 6.01,
+            "semestre2": 7.24
+        }
+    },
+    "isaacferreiraal": {
+        "nome": "Isaac Teles Ferreira",
+        "idade": 16,
+        "notas": {
+            "semestre1": 9.41,
+            "semestre2": 0.59
+        }
+    },
+    "marianatelesal": {
+        "nome": "Mariana Gomes Teles",
+        "idade": 16,
+        "notas": {
+            "semestre1": 9.36,
+            "semestre2": 7.71
+        }
+    },
+    "rafaelferreiraal": {
+        "nome": "Rafael Gomes Ferreira",
+        "idade": 16,
+        "notas": {
+            "semestre1": 3.16,
+            "semestre2": 6.55
         }
     }
 }

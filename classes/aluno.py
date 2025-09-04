@@ -3,7 +3,7 @@ from funcoes import verificacao as ver
 from funcoes import estrutura as est
 
 class Aluno:
-    def __init__ (self, usuario, nome, idade, notas = {"semestre1": 0, "semestre2": 0}):
+    def __init__ (self, usuario, nome, idade, notas = {"semestre1": 0.0, "semestre2": 0.0}):
         self.usuario = usuario
         self.nome = nome
         self.idade = idade
