@@ -59,10 +59,9 @@ json
   "semestre2": 8.0
 }
 
+```
 
 ## Estrutura do Projeto
-
-```
 
 Professor
 
