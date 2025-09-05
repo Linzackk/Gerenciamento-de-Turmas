@@ -3,7 +3,6 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![GitHub](https://img.shields.io/badge/Git-GitHub-orange)
 
-## Descrição
 Este projeto é um programa em Python para **gerenciar turmas, alunos e professores**, utilizando:  
 
 - **Programação Orientada a Objetos (POO)**
@@ -92,6 +91,7 @@ manipulacaoTurmas/
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
 ```
+
 
 
 
