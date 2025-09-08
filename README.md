@@ -3,7 +3,6 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![GitHub](https://img.shields.io/badge/Git-GitHub-orange)
 
-## Descrição
 Este projeto é um programa em Python para **gerenciar turmas, alunos e professores**, utilizando:  
 
 - **Programação Orientada a Objetos (POO)**
@@ -43,7 +42,40 @@ Mostrando a criação de um novo professor com cadastro automático de usuário.
 
 ---
 
+## Contas de Exemplo
+
+Para facilitar os testes do programa, seguem três contas já cadastradas:
+
+### Aluno
+**Usuário:** `exemploalunoal`  
+**Nome:** Exemplo Aluno  
+**Idade:** 18  
+**Notas:**  
+```
+json
+{
+  "semestre1": 7.5,
+  "semestre2": 8.0
+}
+
+```
+
 ## Estrutura do Projeto
+
+Professor
+
+Usuário: exemploprofpr
+Nome: Exemplo Professor
+Idade: 35
+Matéria: Matemática
+
+Administrador
+
+Usuário: exemploadmad
+Nome: Exemplo Admin
+Idade: 40
+
+---
 
 ```
 manipulacaoTurmas/
