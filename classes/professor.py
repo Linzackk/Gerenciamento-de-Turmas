@@ -12,7 +12,7 @@ class Professor:
     @est.separacao
     def mostrarMenu(self):
         # Mostra o Menu principal do Professor
-        opcoes = ["Atribuir Notas", "Atualizar Dados", "Verificar Informações"]
+        opcoes = ["Atribuir Notas", "Atualizar Dados", "Verificar Informações", "Maior Média", "Menor Média", "Média da Turma"]
         est.mostrarMenu(opcoes, "MENU DO PROFESSOR")
         escolha = ver.verificacaoEscolha(opcoes)
         return escolha
@@ -74,4 +74,30 @@ class Professor:
                 nota = float(input("Insira a Nota: "))
             alunos[usuario]["notas"][f"semestre{escolha}"] = nota
             arq.salvarArquivo(alunos, "Alunos")
+    
+    def mostrarMaiorMedia(self):
+        maiorMedia = [0, "nome"]
+        alunos = arq.importarArquivo("Alunos")
+        for aluno in alunos:
+            media = (alunos[aluno]["notas"]["semestre1"] + alunos[aluno]["notas"]["semestre2"]) / 2
+            if media > maiorMedia[0]:
+                maiorMedia[0], maiorMedia[1] = media, aluno
+        print(f"O Aluno(a) com maior media é {alunos[maiorMedia[1]]["nome"]} com uma média de {maiorMedia[0]}")
         
+    def mostrarMenorMedia(self):
+        menorMedia = [11, "nome"]
+        alunos = arq.importarArquivo("Alunos")
+        for aluno in alunos:
+            media = (alunos[aluno]["notas"]["semestre1"] + alunos[aluno]["notas"]["semestre2"]) / 2
+            if media < menorMedia[0]:
+                menorMedia[0], menorMedia[1] = media, aluno
+        print(f"O Aluno(a) com menor media é {alunos[menorMedia[1]]["nome"]} com uma média de {menorMedia[0]}")
+    
+    def mediaTurma(self):
+        somaTotal = 0
+        contador = 0
+        alunos = arq.importarArquivo("Alunos")
+        for aluno in alunos:
+            somaTotal += (alunos[aluno]["notas"]["semestre1"] + alunos[aluno]["notas"]["semestre2"]) / 2
+            contador += 1
+        print(f"A Média da turma é de {(somaTotal / contador):.1f} com {contador} Alunos na Turma!")

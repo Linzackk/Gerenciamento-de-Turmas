@@ -71,6 +71,12 @@ elif sigla == "pr":
             arq.salvarArquivo(arq.salvarProfessor(professor, professores), "Professores")
         elif escolha == 3:
             professor.verInformacoes()
+        elif escolha == 4:
+            professor.mostrarMaiorMedia()
+        elif escolha == 5:
+            professor.mostrarMenorMedia()
+        elif escolha == 6:
+            professor.mediaTurma()
 
 # Caso da sigla para Administrativo        
 elif sigla == "ad":
