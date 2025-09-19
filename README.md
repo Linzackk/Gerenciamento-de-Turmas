@@ -1,4 +1,4 @@
-# Sistema de Manipulação de Turmas em Python
+# Sistema de Gerenciamento de Turmas em Python
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![GitHub](https://img.shields.io/badge/Git-GitHub-orange)
@@ -90,4 +90,5 @@ manipulacaoTurmas/
 │ └── estrutura.py
 ├── arquivosJson/ # Pasta onde os arquivos JSON são salvos
 └── README.md # Este arquivo
+
 ```
